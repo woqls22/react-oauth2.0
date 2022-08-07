@@ -1,0 +1,32 @@
+.title{
+ height: 100px;
+}
+.email_input{
+    width: 60%;
+}
+.password_input{
+    margin-top: 10px;
+    width: 60%;
+}
+.login_btn{
+    margin-top: 10px;
+    width:60%;
+}
+.signup_title{
+    margin-top: 30px;
+    font-size: large;
+    margin-bottom: 10px;
+}
+.signup_btn{
+    margin-top: 20px;
+    width:60%;
+}
+.two-cell-row{
+    width: 80%;
+    display: flex;
+    font-size: 11pt;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding: 2px;
+}
+
