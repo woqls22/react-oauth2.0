@@ -19,9 +19,6 @@ export default function Home() {
         setSignupState(
           `http://localhost:8080/api/v1/oauth2/authorize?client_id=${res.data.clientId}&scope=${res.data.scope}&redirect_uri=${res.data.redirectUri}&state=${res.data.state}`
         );
-        console.log(res.data);
-      } else {
-        setSignupState("등록 실패");
       }
     });
   };

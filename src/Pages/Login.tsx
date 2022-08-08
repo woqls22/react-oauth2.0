@@ -15,18 +15,6 @@ export default function Login() {
   const [signUpState, setSignupState] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const signUp = () => {
-    SpringAxios.post("/oauth2/initialize").then((res) => {
-      if (res.status == 200) {
-        setSignupState(
-          `http://localhost:8080/api/v1/oauth2/authorize?client_id=${res.data.clientId}&scope=${res.data.scope}&redirect_uri=${res.data.redirectUri}&state=${res.data.state}`
-        );
-        console.log(res.data);
-      } else {
-        setSignupState("등록 실패");
-      }
-    });
-  };
   const signIn = () => {
     const params = new URLSearchParams(window.location.search);
     let redirectUri = params.get("redirectUri");
@@ -36,7 +24,6 @@ export default function Login() {
       JSON.stringify({
         email: email,
         password: password,
-        redirectUri: redirectUri,
       })
     );
   };
